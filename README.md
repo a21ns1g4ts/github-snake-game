@@ -1,11 +1,9 @@
 # 🐍 GitHub Snake Game
 
-<div align="center">
-    ![alt text](screenshot.png "Screenshot")
-  
-    [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-    ![GitHub stars](https://img.shields.io/github/stars/a21ns1g4ts/github-snake-game?style=social)
-</div>
+![Screenshot](screenshot.png "Screenshot")
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+![GitHub stars](https://img.shields.io/github/stars/a21ns1g4ts/github-snake-game?style=social)
 
 Um jogo da cobrinha inovador que transforma sua jogada em um gráfico de contribuições do GitHub!
 
@@ -20,16 +18,15 @@ Um jogo da cobrinha inovador que transforma sua jogada em um gráfico de contrib
 
 ## 🚀 Como rodar localmente
 
-```bash
 # Clone o repositório
 git clone https://github.com/a21ns1g4ts/github-snake-game.git
 cd github-snake-game
 
 # Instale as dependências
-npm install
+    npm install
 
 # Inicie o servidor de desenvolvimento
-npm run dev
+    npm run dev
 
 Acesse: [http://localhost:3000](http://localhost:3000)
 
@@ -46,9 +43,13 @@ Acesse: [http://localhost:3000](http://localhost:3000)
 ## 🎮 Controles
 
 ↑ - Mover para cima
+
 ↓ - Mover para baixo
+
 ← - Mover para esquerda
+
 → - Mover para direita
+
 Enter - Reiniciar jogo
 
 ## 🤝 Quer contribuir?
@@ -62,11 +63,3 @@ Enter - Reiniciar jogo
 ## 📄 Licença
 
 MIT License - veja o arquivo [LICENSE](LICENSE) para detalhes.
-
----
-
-<div align="center">
-  Gostou do projeto? Deixe sua ⭐ no GitHub!
-  
-  [![Visitar Repositório](https://img.shields.io/badge/-Visitar_Repositório-black?style=for-the-badge&logo=github)](https://github.com/a21ns1g4ts/github-snake-game)
-</div>
