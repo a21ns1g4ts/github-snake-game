@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
 import { useKeyPress } from '../hooks/useKeyPress';
-import { ArrowUp, ArrowDown, ArrowLeft, ArrowRight } from 'lucide-react';
+import { ArrowUp, ArrowDown, ArrowLeft, ArrowRight, Github } from 'lucide-react'
 import { cn } from '@/lib/utils';
 
 type Direction = 'UP' | 'DOWN' | 'LEFT' | 'RIGHT';
@@ -106,41 +106,74 @@ const GitSnake = () => {
   });
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 p-8">
-      <div className="mb-8">
-        <h1 className="text-4xl font-bold text-green-500 mb-4">GitHub Snake</h1>
-        <div className="flex items-center justify-center gap-4 text-white mb-4">
-          <div className="flex items-center gap-2">
-            <ArrowUp size={24} />
-            <ArrowDown size={24} />
-            <ArrowLeft size={24} />
-            <ArrowRight size={24} />
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 p-4 sm:p-8">
+      <div className="max-w-2xl w-full bg-gray-800 rounded-xl p-6 sm:p-8 shadow-2xl border border-gray-700">
+        
+        <div className="mb-8 text-center">
+          <h1 className="text-4xl sm:text-5xl font-bold text-green-500 mb-4 animate-pulse">
+            🐍 GitHub Snake Game
+          </h1>
+          <div className="flex flex-col items-center gap-4 sm:gap-6 mb-8">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-white">
+              <div className="flex items-center gap-2 bg-gray-700 px-3 py-1 sm:px-4 sm:py-2 rounded-lg">
+                <ArrowUp size={20} className="text-green-400" />
+                <ArrowDown size={20} className="text-green-400" />
+                <ArrowLeft size={20} className="text-green-400" />
+                <ArrowRight size={20} className="text-green-400" />
+              </div>
+              <span className="text-lg sm:text-xl text-center sm:text-left">
+                Use as setas para mover a cobrinha
+              </span>
+            </div>
+
+            <div className="text-2xl sm:text-3xl font-mono text-green-500">
+              🏆 Pontuação: <span className="text-white">{score}</span>
+            </div>
+
+            {gameOver && (
+              <div className="text-xl sm:text-2xl text-red-500 animate-bounce">
+                Game Over! Pressione Enter para recomeçar
+              </div>
+            )}
           </div>
-          <span>Use as setas para mover</span>
         </div>
-        <div className="text-2xl text-green-500 mb-4">Pontuação: {score}</div>
-        {gameOver && (
-          <div className="text-red-500 mb-4">
-            Game Over! Pressione Enter para recomeçar
+
+        <div className="bg-gray-700 p-4 sm:p-6 rounded-lg shadow-inner">
+          <div
+            className="grid gap-1 mx-auto"
+            style={{ gridTemplateColumns: `repeat(${GRID_SIZE}, 1fr)` }}
+          >
+            {grid.map((row, y) =>
+              row.map((cell, x) => (
+                <div
+                  key={`${x}-${y}`}
+                  className={cn(
+                    "w-4 h-4 sm:w-5 sm:h-5 rounded-sm transition-all duration-200",
+                    getContributionColor(cell),
+                    snake.some(pos => pos.x === x && pos.y === y) &&
+                      "bg-white scale-110 shadow-md"
+                  )}
+                />
+              ))
+            )}
           </div>
-        )}
-      </div>
-      
-      <div className="bg-gray-800 p-4 rounded-lg">
-        <div className="grid gap-1" style={{ gridTemplateColumns: `repeat(${GRID_SIZE}, 1fr)` }}>
-          {grid.map((row, y) => 
-            row.map((cell, x) => (
-              <div
-                key={`${x}-${y}`}
-                className={cn(
-                  "w-5 h-5 rounded-sm transition-colors duration-200",
-                  getContributionColor(cell),
-                  snake.some(pos => pos.x === x && pos.y === y) && "bg-white"
-                )}
-              />
-            ))
-          )}
         </div>
+
+        <div className="mt-8 sm:mt-10 text-center">
+          <p className="text-gray-400 mb-3 sm:mb-4">
+            Gostou do projeto? Dê uma ⭐ no GitHub para apoiar o desenvolvimento!
+          </p>
+          <a
+            href="https://github.com/a21ns1g4ts/github-snake-game"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 sm:py-3 sm:px-6 rounded-full transition-transform duration-300 hover:scale-105"
+          >
+            <Github size={20} className="sm:size-5" />
+            Visitar Repositório
+          </a>
+        </div>
+
       </div>
     </div>
   );
