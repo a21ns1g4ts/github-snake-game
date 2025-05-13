@@ -1,74 +1,72 @@
-# Welcome to your Lovable project
+# 🐍 GitHub Snake Game
 
-## Project info
+<div align="center">
+    ![alt text](screenshot.png "Screenshot")
+  
+    [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+    ![GitHub stars](https://img.shields.io/github/stars/a21ns1g4ts/github-snake-game?style=social)
+</div>
 
-**URL**: https://lovable.dev/projects/d522955e-9ad6-43e8-b782-9eb0b7237fed
+Um jogo da cobrinha inovador que transforma sua jogada em um gráfico de contribuições do GitHub!
 
-## How can I edit this code?
+## ✨ Features
 
-There are several ways of editing your application.
+- 🕹️ **Jogo clássico** com controles intuitivos (setas do teclado)
+- 🌱 **Crescimento visual** simulando contribuições no GitHub
+- 🎨 **Cores dinâmicas** (0-4 níveis de contribuição)
+- 📊 **Sistema de pontuação** em tempo real
+- 🔄 **Reinício automático** ao game over
+- 📱 **Totalmente responsivo** (desktop e mobile)
 
-**Use Lovable**
+## 🚀 Como rodar localmente
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/d522955e-9ad6-43e8-b782-9eb0b7237fed) and start prompting.
+```bash
+# Clone o repositório
+git clone https://github.com/a21ns1g4ts/github-snake-game.git
+cd github-snake-game
 
-Changes made via Lovable will be committed automatically to this repo.
+# Instale as dependências
+npm install
 
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Inicie o servidor de desenvolvimento
 npm run dev
-```
 
-**Edit a file directly in GitHub**
+Acesse: [http://localhost:3000](http://localhost:3000)
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 🛠 Stack Tecnológica
 
-**Use GitHub Codespaces**
+| Tecnologia       | Descrição                          |
+|------------------|------------------------------------|
+| React           | Biblioteca para construção de UI   |
+| TypeScript      | JavaScript tipado                  |
+| Tailwind CSS    | Framework CSS utilitário           |
+| Lucide Icons    | Ícones modernos                    |
+| Vite            | Build tool ultra-rápida            |
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🎮 Controles
 
-## What technologies are used for this project?
+↑ - Mover para cima
+↓ - Mover para baixo
+← - Mover para esquerda
+→ - Mover para direita
+Enter - Reiniciar jogo
 
-This project is built with:
+## 🤝 Quer contribuir?
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+1. Faça um fork do projeto
+2. Crie sua branch (`git checkout -b feature/nova-feature`)
+3. Commit suas mudanças (`git commit -m 'Adiciona nova feature'`)
+4. Push para a branch (`git push origin feature/nova-feature`)
+5. Abra um Pull Request
 
-## How can I deploy this project?
+## 📄 Licença
 
-Simply open [Lovable](https://lovable.dev/projects/d522955e-9ad6-43e8-b782-9eb0b7237fed) and click on Share -> Publish.
+MIT License - veja o arquivo [LICENSE](LICENSE) para detalhes.
 
-## Can I connect a custom domain to my Lovable project?
+---
 
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
-# github-snake-game
+<div align="center">
+  Gostou do projeto? Deixe sua ⭐ no GitHub!
+  
+  [![Visitar Repositório](https://img.shields.io/badge/-Visitar_Repositório-black?style=for-the-badge&logo=github)](https://github.com/a21ns1g4ts/github-snake-game)
+</div>
